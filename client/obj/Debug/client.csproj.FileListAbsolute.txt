@@ -1,0 +1,7 @@
+D:\Vallet\vallet\client\obj\Debug\client.csprojResolveAssemblyReference.cache
+D:\Vallet\vallet\client\obj\Debug\client.csproj.CoreCompileInputs.cache
+D:\Vallet\vallet\client\bin\Debug\client.exe.config
+D:\Vallet\vallet\client\bin\Debug\client.exe
+D:\Vallet\vallet\client\bin\Debug\client.pdb
+D:\Vallet\vallet\client\obj\Debug\client.exe
+D:\Vallet\vallet\client\obj\Debug\client.pdb

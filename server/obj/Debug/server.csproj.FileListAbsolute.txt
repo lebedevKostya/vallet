@@ -1,0 +1,7 @@
+D:\Vallet\vallet\server\obj\Debug\server.csprojResolveAssemblyReference.cache
+D:\Vallet\vallet\server\obj\Debug\server.csproj.CoreCompileInputs.cache
+D:\Vallet\vallet\server\bin\Debug\server.exe.config
+D:\Vallet\vallet\server\bin\Debug\server.exe
+D:\Vallet\vallet\server\bin\Debug\server.pdb
+D:\Vallet\vallet\server\obj\Debug\server.exe
+D:\Vallet\vallet\server\obj\Debug\server.pdb
