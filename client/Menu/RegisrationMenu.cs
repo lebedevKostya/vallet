@@ -6,24 +6,41 @@ using System.Threading.Tasks;
 
 namespace client.Menu
 {
-    class RegisrationMenu : Menu
+    class RegisrationMenu : AbstractMenu
     {
-        private String login;
-        private String password;
-        private String[] input = new String[2];
+        private string _menuMessage = " Меню Регистрации ";
+        private string _name;
+        private string _surname;
+        private string _login;
+        private string _password;
+
+        private List<string> _input;
+        
 
         public RegisrationMenu()
         {
-            Console.WriteLine("Введите логин: ");
-            login = Console.ReadLine();
-
-            Console.WriteLine("Введите пароль: ");
-            password = Console.ReadLine();
-
-            
-
+            Console.Clear();
+            ShowMenu(_menuMessage);
+            _input = new List<string>();
         }
-        public void Action()
-        { }
+
+       
+
+        public override void RunMenu()
+        {
+            Console.WriteLine("Введите имя: ");
+            _name = Console.ReadLine();
+            _input.Add(_name);
+            Console.WriteLine("Введите фамилию: ");
+            _surname = Console.ReadLine();
+            _input.Add(_surname);
+            Console.WriteLine("Введите логин: ");
+            _login = Console.ReadLine();
+            _input.Add(_login);
+            Console.WriteLine("Введите пароль: ");
+            _password = Console.ReadLine();
+            _input.Add(_password);
+        }
+
     }
 }

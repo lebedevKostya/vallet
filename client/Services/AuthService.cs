@@ -4,24 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace client
+namespace client.Services
 {
-    class AuthService
+    class AuthService : AbstractService
     {
         
-        private string _comunicationProt;
-
-
-
+        
         public AuthService()
         {
-            _comunicationProt = "1";
+            ComunicationProt = "1";
         }
 
 
-        public string GenerateRequest(string[] inputHand)
+        public override string  GenerateRequest(List<String> inputHand)
         {
-            string request = _comunicationProt + "," + inputHand[0] + "," + inputHand[1]; 
+            inputHand.Insert(0, ComunicationProt);
+            string request = String.Join(",", inputHand); 
             return request;
         }
     }

@@ -14,6 +14,7 @@ namespace client
             menu.Run();
             SocketClient.SendMessage(socket, menu.MessageToSocket);
             ResponseHandler authhandler = new ResponseHandler(SocketClient.ReciveMessage(socket));
+            Console.ReadLine();
         }
     }
 }

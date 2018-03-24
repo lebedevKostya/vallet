@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace client.Menu
 {
-    abstract class Menu
+    abstract class AbstractMenu
     {
+
+        abstract public void RunMenu();
+
         public void ShowMenu(String message)
         {
           Console.WriteLine("{0,50}",message);

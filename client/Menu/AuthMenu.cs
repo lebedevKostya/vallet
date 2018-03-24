@@ -6,40 +6,36 @@ using System.Threading.Tasks;
 
 namespace client.Menu
 {
-    class AuthMenu : Menu
+    class AuthMenu : AbstractMenu
     {
         private String _menuMessage = " Меню Авторизации ";
         private String login;
         private String password;
+        private List<String> _input;
+        
 
-        private String[] input = new String[2];
-        public string[] Input { get => input; }
 
-        private AuthService _authService;
 
         public AuthMenu()
         {
-            _authService = new AuthService();
             Console.Clear();
             ShowMenu(_menuMessage);
+            _input = new List<string>();
         }
 
-        public void Action()
+    
+
+        public override void RunMenu()
         {
             Console.WriteLine("Введите логин: ");
             login = Console.ReadLine();
-
+            _input.Add(login);
             Console.WriteLine("Введите пароль: ");
             password = Console.ReadLine();
-
-            Input[0] = login;
-            Input[1] = password;
+            _input.Add(login);
 
         }
-        public string HandleMessageToSocket()
-        {
-           return  _authService.GenerateRequest(Input);
-        }
+  
 
         
 
