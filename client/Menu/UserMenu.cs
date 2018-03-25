@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace client.Menu
 {
-    class UserMenu : AbstractMenu
+    class UserMenu : AbstractMenu<string>
     {
         private string _menuMessage = " Меню Пользователя";
         private string _message = "Выберите действие:\n 1-Открыть список счетов\n 2- Открыть новый счет\n 3- Выход\n";
         private string _choice;
 
-        private AuthMenu _authMenu;
-        private RegisrationMenu _regMenu;
+
 
         public UserMenu()
         {
@@ -25,6 +24,10 @@ namespace client.Menu
             Console.Clear();
             Console.WriteLine(_message);
             _choice = Console.ReadLine();
+        }
+        public override string GetInput()
+        {
+            return _choice;
         }
     }
 }

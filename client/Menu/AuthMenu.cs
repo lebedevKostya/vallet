@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace client.Menu
 {
-    class AuthMenu : AbstractMenu
+    class AuthMenu : AbstractMenu<List<string>>
     {
         private String _menuMessage = " Меню Авторизации ";
         private String login;
@@ -34,6 +34,10 @@ namespace client.Menu
             password = Console.ReadLine();
             _input.Add(login);
 
+        }
+        public override List<string> GetInput()
+        {
+            return _input;
         }
   
 

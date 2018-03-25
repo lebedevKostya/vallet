@@ -11,14 +11,15 @@ namespace client
     class SocketClient
     {
         static string address = "127.0.0.1";
+        public static Socket _sender;
 
         public static Socket StartClient()
         {
             IPEndPoint remoteEP = new IPEndPoint(IPAddress.Parse(address), 8505);
-            Socket sender = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            _sender = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             try
             {
-                sender.Connect(remoteEP);
+                _sender.Connect(remoteEP);
                 Console.Clear();
             }
 
@@ -27,7 +28,7 @@ namespace client
                 Console.WriteLine(ex.Message);
 
             }
-            return sender;
+            return _sender;
 
         }
 

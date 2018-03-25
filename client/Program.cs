@@ -9,12 +9,17 @@ namespace client
     {
         public static void Main()
         {
-            Socket socket = SocketClient.StartClient();
-            EntryMeny menu = new EntryMeny();
-            menu.Run();
-            SocketClient.SendMessage(socket, menu.MessageToSocket);
-            ResponseHandler authhandler = new ResponseHandler(SocketClient.ReciveMessage(socket));
-            Console.ReadLine();
+
+            SocketClient.StartClient();
+            while (true)
+            {
+                
+                MainClient client = new MainClient();
+                client.StartClient();
+                Console.ReadLine();
+            }
+           
+            
         }
     }
 }
