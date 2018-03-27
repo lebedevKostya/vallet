@@ -5,3 +5,6 @@ D:\Vallet\vallet\client\bin\Debug\client.exe
 D:\Vallet\vallet\client\bin\Debug\client.pdb
 D:\Vallet\vallet\client\obj\Debug\client.exe
 D:\Vallet\vallet\client\obj\Debug\client.pdb
+D:\Vallet\vallet\client\bin\Debug\nunit.framework.dll
+D:\Vallet\vallet\client\bin\Debug\nunit.framework.pdb
+D:\Vallet\vallet\client\bin\Debug\nunit.framework.xml

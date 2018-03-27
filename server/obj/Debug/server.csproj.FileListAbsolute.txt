@@ -5,3 +5,6 @@ D:\Vallet\vallet\server\bin\Debug\server.exe
 D:\Vallet\vallet\server\bin\Debug\server.pdb
 D:\Vallet\vallet\server\obj\Debug\server.exe
 D:\Vallet\vallet\server\obj\Debug\server.pdb
+D:\Vallet\vallet\server\bin\Debug\nunit.framework.dll
+D:\Vallet\vallet\server\bin\Debug\nunit.framework.pdb
+D:\Vallet\vallet\server\bin\Debug\nunit.framework.xml

@@ -29,7 +29,8 @@ namespace server
                 _listenSocket.Listen(10);
 
                 Console.WriteLine("Сервер запущен. Ожидание подключения...");
-           
+            }
+
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
@@ -94,10 +95,10 @@ namespace server
                 _listenSocket.Listen(10);
 
                 Console.WriteLine("Сервер запущен. Ожидание подключения...");
-
+                Socket handler = _listenSocket.Accept();
                 while (true)
                 {
-                    Socket handler = _listenSocket.Accept();
+                    
                     // получаем сообщение
                     StringBuilder builder = new StringBuilder();
                     int bytes = 0;
@@ -116,8 +117,8 @@ namespace server
                     string message = "2,asdasd";
                     data = Encoding.Unicode.GetBytes(message);
                     handler.Send(data);
-                    handler.Shutdown(SocketShutdown.Both);
-                    handler.Close();
+                    //handler.Shutdown(SocketShutdown.Both);
+                    //handler.Close();
 
 
 

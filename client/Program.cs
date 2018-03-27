@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Sockets;
 using client.Menu;
-
+using client.Menu.states;
 
 namespace client
 {
@@ -9,15 +9,10 @@ namespace client
     {
         public static void Main()
         {
-
             SocketClient.StartClient();
-            while (true)
-            {
-                
-                MainClient client = new MainClient();
-                client.StartClient();
-                Console.ReadLine();
-            }
+            MainClientContext st = new MainClientContext();
+            while (st.getState() != null)
+                st.RunMenu();
            
             
         }
