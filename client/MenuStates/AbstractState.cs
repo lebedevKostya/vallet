@@ -4,18 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace client.Menu.states
+namespace client.MenuStates
 {
-    public abstract class IState
+    public abstract class AbstractState
     {
         protected MainClientContext _context;
 
-        public IState(MainClientContext context)
+        public AbstractState(MainClientContext context)
         {
             _context = context; 
         }
 
-        abstract public void RunMenu();  
+        abstract public void StartMenu();
+        abstract public void RunMenu(); 
+        
 
         public void ShowMenu(String message)
         {

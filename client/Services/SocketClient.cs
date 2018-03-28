@@ -20,12 +20,14 @@ namespace client
             try
             {
                 _sender.Connect(remoteEP);
-                Console.Clear();
+                
             }
 
             catch (Exception ex)
             {
+                Console.Clear();
                 Console.WriteLine(ex.Message);
+                //StartClient();
 
             }
             return _sender;

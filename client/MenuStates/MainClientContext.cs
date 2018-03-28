@@ -4,27 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace client.Menu.states
+namespace client.MenuStates
 {
 
     public class MainClientContext 
     {
-        private IState _state;
+        private AbstractState _state;
+        private User _user;
+        internal User User { get => _user; set => _user = value; }
 
-
-       public MainClientContext()
+        public MainClientContext()
         {
             _state = new EntryState(this);
           
         }
 
 
-        public IState getState()
+        public AbstractState getState()
         {
             return _state;
         }
 
-        public void ChangeState(IState state)
+        public void ChangeState(AbstractState state)
         {
             _state = state;
         }
@@ -32,6 +33,10 @@ namespace client.Menu.states
         public void RunMenu()
         {
             _state.RunMenu();
+        }
+        public void StartMenu()
+        {
+            _state.StartMenu();
         }
 
 

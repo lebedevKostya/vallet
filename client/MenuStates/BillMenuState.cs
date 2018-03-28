@@ -6,36 +6,37 @@ using System.Threading.Tasks;
 
 namespace client.MenuStates
 {
-    class EntryState : AbstractState
+    class BillMenuState : AbstractState
     {
-        private string _menuMessage = "Меню входа";
-        private string _message = "Выберите действие:\n 1-Авторизация\n 2- Регистрация\n ";
+        Bill _currentBill;
+        private string _menuMessage = "Меню счета";
+        private string _message = "Выберите действие:\n 1-Перевод\n 2-Выписка\n 3-Закрыть счет\n 4-Выйти из меню счета\n ";
         private string _input;
-
-        //private Dictionary<string, AbstractState> _choice;
-
         private Dictionary<string, IStateFactory> _choice;
 
-
-        public EntryState(MainClientContext context) : base(context)
+        public BillMenuState(MainClientContext context) : base(context)
         {
             _context = context;
+            _currentBill = _context.User.CurrentBill;
             _choice = new Dictionary<string, IStateFactory>
             {
-                {"1", new AuthStateFactory() },
-                {"2", new RegStateFactory() }
+                {"1", new TransferMenuFactory() },
+                {"2", new TransactionMenuFactory() },
+                {"3", new CloseBillMenuFactory () },
+                {"4", new BillListMenuFactory() }
             };
         }
 
         public override void StartMenu()
         {
             ShowMenu(_menuMessage);
+            Console.WriteLine(_currentBill.ToString());
             Console.WriteLine(_message);
-           
+
         }
 
         public override void RunMenu()
-        { 
+        {
             try
             {
                 _input = Console.ReadLine();
@@ -50,10 +51,6 @@ namespace client.MenuStates
             }
         }
 
-
-
-
-
-
+    
     }
 }
