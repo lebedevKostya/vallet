@@ -8,3 +8,13 @@ D:\Vallet\vallet\client\obj\Debug\client.pdb
 D:\Vallet\vallet\client\bin\Debug\nunit.framework.dll
 D:\Vallet\vallet\client\bin\Debug\nunit.framework.pdb
 D:\Vallet\vallet\client\bin\Debug\nunit.framework.xml
+D:\Projects\csharp\testClientKot\vallet\client\bin\Debug\client.exe.config
+D:\Projects\csharp\testClientKot\vallet\client\bin\Debug\client.exe
+D:\Projects\csharp\testClientKot\vallet\client\bin\Debug\client.pdb
+D:\Projects\csharp\testClientKot\vallet\client\bin\Debug\nunit.framework.dll
+D:\Projects\csharp\testClientKot\vallet\client\bin\Debug\nunit.framework.pdb
+D:\Projects\csharp\testClientKot\vallet\client\bin\Debug\nunit.framework.xml
+D:\Projects\csharp\testClientKot\vallet\client\obj\Debug\client.csprojResolveAssemblyReference.cache
+D:\Projects\csharp\testClientKot\vallet\client\obj\Debug\client.csproj.CoreCompileInputs.cache
+D:\Projects\csharp\testClientKot\vallet\client\obj\Debug\client.exe
+D:\Projects\csharp\testClientKot\vallet\client\obj\Debug\client.pdb

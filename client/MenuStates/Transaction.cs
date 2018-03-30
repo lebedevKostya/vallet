@@ -14,14 +14,15 @@ namespace client.MenuStates
         private decimal amount;
         private DateTime _transactDate;
 
-        public Transaction(string idTransaction, string recipientId, string idBill, decimal amount, DateTime transactDate)
+
+        public Transaction(string recipientId, string idBill, decimal amount)
         {
-            _idTransaction = idTransaction;
             _recipientId = recipientId;
             _idBill = idBill;
             this.amount = amount;
-            _transactDate = transactDate;
         }
+
+       
 
         public string IdTransaction { get => _idTransaction; set => _idTransaction = value; }
         public string RecipientId { get => _recipientId; set => _recipientId = value; }
