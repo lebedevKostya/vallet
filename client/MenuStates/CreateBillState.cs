@@ -55,7 +55,7 @@ namespace client.MenuStates
         private List<string> CommunicateWithTheServer()
         {
             _comService = new CommunicationService(CommunicationService.RequestCode.createBill, SocketClient._sender);
-            _comService.SendToServer();
+            _comService.SendToServerBillList(_context.User.Login);
             return _comService.ReciveToServer();
         }
     }

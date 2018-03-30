@@ -29,7 +29,7 @@ namespace client.MenuStates
             Console.Clear();
             ShowMenu(_menuMessage);
             Console.WriteLine(_message);
-            _input = Console.ReadLine();
+            
         }
 
         public override void RunMenu()

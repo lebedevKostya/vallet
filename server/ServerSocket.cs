@@ -114,7 +114,7 @@ namespace server
 
                     Console.WriteLine(DateTime.Now.ToShortTimeString() + ": " + builder.ToString());
 
-                    string message = "2,asdasd";
+                    string message = "1,asdasd";
                     data = Encoding.Unicode.GetBytes(message);
                     handler.Send(data);
                     //handler.Shutdown(SocketShutdown.Both);

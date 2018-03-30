@@ -12,6 +12,7 @@ namespace client
     {
         static string address = "127.0.0.1";
         public static Socket _sender;
+        
 
         public static Socket StartClient()
         {

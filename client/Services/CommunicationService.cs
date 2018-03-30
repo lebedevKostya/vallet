@@ -37,12 +37,19 @@ namespace client.Services
         }
         
         //Методы для отправки
-        public void SendToServer()
+        public void SendToServerBillList(string login)
         {
-            _request = (_comunicationProtocol.ToString());              
+            _request = (_comunicationProtocol.ToString() + "," + login);              
             SocketClient.SendMessage(SocketClient._sender, _request);
         }
-         
+
+        public void SendToServerTransac(string id_bill)
+        {
+            _request = (_comunicationProtocol.ToString() + "," + id_bill );
+            SocketClient.SendMessage(SocketClient._sender, _request);
+        }
+
+
         public void SendToServer( List<String> inputHand)
         {
             inputHand.Insert(0, _comunicationProtocol.ToString());
@@ -91,6 +98,7 @@ namespace client.Services
 
         public List<Transaction> ReciveToServerTransacList()
         {
+            _transac = new List<Transaction>();
             string answer = SocketClient.ReciveMessage(SocketClient._sender);
             _afterParse = answer.Split(',').ToList();
             foreach (var item in _afterParse)

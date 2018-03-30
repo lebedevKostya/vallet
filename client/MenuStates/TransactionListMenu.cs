@@ -40,7 +40,7 @@ namespace client.MenuStates
         private List<Transaction> CommunicateWithTheServer()
         {
             _comService = new CommunicationService(CommunicationService.RequestCode.transaction, SocketClient._sender);
-            _comService.SendToServer();
+            _comService.SendToServerTransac(_context.User.CurrentBill.Id);
             return _comService.ReciveToServerTransacList();
         }
     }
