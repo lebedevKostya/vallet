@@ -82,7 +82,7 @@ namespace client.Services
                 foreach (var item in _afterParse)
                 {
                     string[] separated = item.Split(';');
-                    Bill bill = new Bill(separated[0], separated[1], DateTime.Parse(separated[2]), Decimal.Parse(separated[3]));
+                    Bill bill = new Bill(separated[0], DateTime.Parse(separated[1]), Decimal.Parse(separated[2]));
                     _billList.Add(bill);
                 }
             }
@@ -104,7 +104,7 @@ namespace client.Services
             foreach (var item in _afterParse)
             {
                 string[] separated = item.Split(';');
-                Transaction transact = new Transaction(separated[0], separated[1], separated[2], Decimal.Parse(separated[3]), DateTime.Parse(separated[4]));
+                Transaction transact = new Transaction( separated[0], separated[1], Decimal.Parse(separated[2]));
                 _transac.Add(transact);
             }
 

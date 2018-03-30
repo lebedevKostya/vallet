@@ -36,7 +36,7 @@ namespace client.MenuStates
         {
             Console.WriteLine(_message);
             _input = Console.ReadLine();
-            if (_input == "0")
+            if (_input.Equals("0"))
             {
                 _context.ChangeState(new UserMenuState(_context));
             }
@@ -44,17 +44,16 @@ namespace client.MenuStates
             {
                 foreach (var item in _context.User.BillList)
                 {
-                    if(_input == item.Id)
+                    if(_input.Equals(item.Id))
                     {
                         _context.User.CurrentBill = item;
                         _context.ChangeState(new BillMenuState(_context));
                     }
-                    else
-                    {
-                        Console.WriteLine("Ошибка ввода. Повторите ввод");
-                        RunMenu();
-                    }
+
                 }
+                    //Console.WriteLine("Ошибка ввода. Повторите ввод");
+                    //RunMenu();
+                
             }
         }
 

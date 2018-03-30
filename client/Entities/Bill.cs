@@ -23,10 +23,10 @@ namespace client.MenuStates
             Id = "Нет счетов";
 
         }
-        public Bill(string id, string login, DateTime createDate, decimal amount)
+        public Bill(string id,  DateTime createDate, decimal amount)
         {
             Id = id;
-            Login = login;
+            
             CreateDate = createDate;
             Amount = amount;
             _transacList = new List<Transaction>();

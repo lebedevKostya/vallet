@@ -48,7 +48,7 @@ namespace client.MenuStates
             {
                 if (answer[0] == "1")
                 {
-                    _context.User = new User(_input[0]);
+                    _context.User = new User(_input[1]);
                     _context.ChangeState(_choice[answer[0]].CreateState(_context));
                 }
                 else
