@@ -26,6 +26,7 @@ namespace client.MenuStates
 
         public override void StartMenu()
         {
+            Console.Clear();
             ShowMenu(_menuMessage);
             Console.WriteLine(_message);
             _input = Console.ReadLine();

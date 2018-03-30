@@ -49,16 +49,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MenuStates\AuthState.cs" />
-    <Compile Include="MenuStates\Bill.cs" />
+    <Compile Include="Entities\Bill.cs" />
     <Compile Include="MenuStates\BillListState.cs" />
     <Compile Include="MenuStates\BillMenuState.cs" />
     <Compile Include="MenuStates\CloseBillMenu.cs" />
     <Compile Include="MenuStates\CreateBillState.cs" />
     <Compile Include="MenuStates\EntryState.cs" />
-    <Compile Include="MenuStates\MainClientContext.cs" />
+    <Compile Include="MenuStates\Transaction.cs" />
+    <Compile Include="Services\MainClientContext.cs" />
     <Compile Include="MenuStates\AbstractState.cs" />
     <Compile Include="MenuStates\RegState.cs" />
-    <Compile Include="MenuStates\IStateFactory.cs" />
+    <Compile Include="Services\IStateFactory.cs" />
     <Compile Include="MenuStates\TransactionListMenu.cs" />
     <Compile Include="MenuStates\TransferMenuState.cs" />
     <Compile Include="MenuStates\UserMenuState.cs" />
@@ -66,7 +67,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SocketClient.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Entities\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

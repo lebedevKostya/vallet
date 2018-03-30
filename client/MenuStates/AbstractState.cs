@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace client.MenuStates
 {
+    /*
+     * Описывает общий интерфейс для всех состояний
+     */
+
     public abstract class AbstractState
     {
         protected MainClientContext _context;

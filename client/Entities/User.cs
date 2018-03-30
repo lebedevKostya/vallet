@@ -19,12 +19,16 @@ namespace client
         public User(string login)
         {
             Login = login;
+            _billList = new List<Bill>();
+            _currentBill = new Bill();
         }
 
         public User(string name, string surname, string login) 
         {
+            Name = name; 
             Surname = surname;
-            Login = login;
+            Login = login; _billList = new List<Bill>();
+            _currentBill = new Bill();
         }
 
 

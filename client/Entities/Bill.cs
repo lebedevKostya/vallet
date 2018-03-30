@@ -12,10 +12,16 @@ namespace client.MenuStates
         private string _login;
         private DateTime _createDate;
         private decimal _amount;
+        private List<Transaction> _transacList;
 
+        public Bill()
+        {
+            _transacList = new List<Transaction>();
+        }
         public Bill(string no_bill)
         {
             Id = "Нет счетов";
+
         }
         public Bill(string id, string login, DateTime createDate, decimal amount)
         {
@@ -23,12 +29,14 @@ namespace client.MenuStates
             Login = login;
             CreateDate = createDate;
             Amount = amount;
+            _transacList = new List<Transaction>();
         }
 
         public string Id { get => _id; set => _id = value; }
         public string Login { get => _login; set => _login = value; }
         public DateTime CreateDate { get => _createDate; set => _createDate = value; }
         public decimal Amount { get => _amount; set => _amount = value; }
+        internal List<Transaction> TransacList { get => _transacList; set => _transacList = value; }
 
         public override string ToString()
         {
@@ -38,7 +46,6 @@ namespace client.MenuStates
             sb.Append(_createDate + ";");
             sb.Append(_amount);
             string bill = sb.ToString();
-
             return bill;
         }
     }

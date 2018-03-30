@@ -31,6 +31,7 @@ namespace client.MenuStates
 
         public override void StartMenu()
         {
+            Console.Clear();
             ShowMenu(_menuMessage);
             Console.WriteLine("Введите логин: ");
             login = Console.ReadLine();

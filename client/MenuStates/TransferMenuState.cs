@@ -28,6 +28,7 @@ namespace client.MenuStates
 
         public override void StartMenu()
         {
+            Console.Clear();
             ShowMenu(_menuMessage);
             Console.WriteLine("Введите ID счета получателя");
             _idRecipient = Console.ReadLine();
@@ -67,7 +68,7 @@ namespace client.MenuStates
 
         private string CommunicateWithTheServer(List<string> input)
         {
-            _comService = new CommunicationService(CommunicationService.RequestCode.auth, SocketClient._sender);
+            _comService = new CommunicationService(CommunicationService.RequestCode.transfer, SocketClient._sender);
             _comService.SendToServer(_input);
             return _comService.ReciveToServ();
         }

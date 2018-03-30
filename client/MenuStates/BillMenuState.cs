@@ -8,7 +8,7 @@ namespace client.MenuStates
 {
     class BillMenuState : AbstractState
     {
-        Bill _currentBill;
+        Bill _currentBill; // будет ли объект создаваться где то???
         private string _menuMessage = "Меню счета";
         private string _message = "Выберите действие:\n 1-Перевод\n 2-Выписка\n 3-Закрыть счет\n 4-Выйти из меню счета\n ";
         private string _input;
@@ -29,6 +29,7 @@ namespace client.MenuStates
 
         public override void StartMenu()
         {
+            Console.Clear();
             ShowMenu(_menuMessage);
             Console.WriteLine(_currentBill.ToString());
             Console.WriteLine(_message);

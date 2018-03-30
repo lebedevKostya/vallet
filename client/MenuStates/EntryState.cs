@@ -11,9 +11,6 @@ namespace client.MenuStates
         private string _menuMessage = "Меню входа";
         private string _message = "Выберите действие:\n 1-Авторизация\n 2- Регистрация\n ";
         private string _input;
-
-        //private Dictionary<string, AbstractState> _choice;
-
         private Dictionary<string, IStateFactory> _choice;
 
 
@@ -29,8 +26,9 @@ namespace client.MenuStates
 
         public override void StartMenu()
         {
+            Console.Clear();
             ShowMenu(_menuMessage);
-            Console.WriteLine(_message);
+            ShowMenu(_message);
            
         }
 

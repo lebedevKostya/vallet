@@ -20,6 +20,7 @@ namespace client.MenuStates
 
         public RegState(MainClientContext context) : base ( context)
         {
+            Console.Clear();
             _context = context;
             Console.Clear();
             _input = new List<string>();

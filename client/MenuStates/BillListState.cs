@@ -22,6 +22,7 @@ namespace client.MenuStates
 
         public override void StartMenu()
         {
+            Console.Clear();
             ShowMenu(_menuMessage);
             _context.User.BillList = CommunicateWithTheServer();
             foreach (var item in _context.User.BillList)
@@ -62,7 +63,7 @@ namespace client.MenuStates
         {
             _comService = new CommunicationService(CommunicationService.RequestCode.billList, SocketClient._sender);
             _comService.SendToServer();
-            return _comService.ReciveToServerBill();
+            return _comService.ReciveToServerBillList();
         }
     }
 }
